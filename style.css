@@ -109,6 +109,10 @@ nav {
     padding: 15px;
 }
 
+.navList a:hover {
+    font-weight: 600;
+}
+
 .cart {
     background: white;
     border: 1px solid #dfdfdf;
@@ -180,14 +184,13 @@ input:focus {
     align-items: center;
 }
 
-.secondList a {
-    display: block;
-
+.secondList a:hover, .secondList li:hover > a, .secondList li:hover {
+    color: #727272;
+    background: rgb(245, 245, 245);
 }
 
 .dropdown {
     position: relative;
-    display: inline-flex;
 }
 
 .dropdown-content {
@@ -196,8 +199,9 @@ input:focus {
     display: none;
     position: absolute;
     top: 100%;
+    left: 0;
     background: #f1f1f1;
-    min-width: 145px;
+    min-width: 161px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -210,14 +214,10 @@ input:focus {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content:hover .dropdown-content {
     display: block;
 }
 
@@ -241,9 +241,15 @@ input:focus {
 
 .backgroundImg > img {
     width: 100%;
-    height: 100%;
+    height: 530px;
     object-fit: cover;
     object-position: 50% 70%;
+}
+
+@media only screen and (min-width: 1921px) {
+    .backgroundImg > img {
+        object-position: 50% 60%;
+    }
 }
 
 .bannerForeground {
@@ -270,6 +276,12 @@ input:focus {
     text-shadow: 2px 5px 8px rgb(49, 49, 49);
 }
 
+@media only screen and (min-width: 1921px) {
+    .foregroundBannerText {
+        left: 36%;
+    }
+}
+
 .foregroundBannerText img {
     width: 250px;
     margin-bottom: 40px;
@@ -289,7 +301,6 @@ input:focus {
 
 .content {
     display: flex;
-    flex-grow: 1;
     margin: 0 auto;
     flex-direction: column;
     width: 60%;
@@ -317,7 +328,7 @@ input:focus {
     width: 630px;
     justify-content: center;
     align-items: center;
-    line-height: 20px;
+    line-height: 25px;
     margin-bottom: 25px;
     text-align: center;
 }
@@ -352,7 +363,6 @@ input:focus {
     font-size: 38px;
     text-shadow: 1px 6px 8px #000000;
 }
-
 
 /* Featured Items */
 
@@ -401,4 +411,8 @@ footer {
 
 .footerNav li a {
     color: white;
+}
+
+.footerNav a:hover {
+    text-shadow: 1px 1px 4px rgb(140, 140, 140);
 }
